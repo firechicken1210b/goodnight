@@ -1,0 +1,95 @@
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;  
+    /* 為啥對所有東西排ROW 但是 MAIN 和ASIDE可以並排  或是說 為啥HEADER和FOOTER可以上下排 ROW是水平排列阿 為啥WRAP換行了*/
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center; 
+  }
+
+  /*  > * 底下一層的所有東西     ">": 底下一層 "*":所有東西  所以更下層的不受影響*/
+  /* 此處是通指FLEX底下所有的子元素屬性 */
+
+  .wrapper > * {
+    /* padding: 10px; */
+    /* 是這裡的100%指定著HEADER和FOOTER便很大 讓它們強制斷行  只要100%就會自己一行(一定比例以上就會) */
+    flex: 1 100%;
+  }
+  
+  .header {
+    background: tomato;
+    height: 60px;
+  }
+  
+  .footer {
+    background: lightgreen;
+    /* height: 60px; */
+  }
+  
+  .main {
+    text-align: left;
+    /* height: 100%; */
+    background: deepskyblue;
+    /* flex: 5 100%; */
+  }
+
+  .container{
+    /* height: 100%; */
+  }
+  .container-2{
+    height: 800px;
+  }
+  
+  .aside-1 {
+    background: gold;
+  }
+  
+  .aside-2 {
+    background: hotpink;
+  }
+
+  .side-menu {
+    background: cornflowerblue;
+    width: 100%;
+    height: 50%;
+    display: flex;  
+  }
+
+  .menu-bar{
+    background: seagreen;
+    /* flex: 1 0 0; */
+    width: 60px;
+  }
+
+  .menu-weather{
+    background: salmon;
+    width: 180px;
+  }
+
+  .side-year {
+    background: blueviolet;
+    width: 100%;
+    height: 50%;
+  }
+  
+  @media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
+  }
+  
+  @media all and (min-width: 800px) {
+    .main    { flex: 7 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+  }
+  
+  body {
+    /* padding: 2em;  */
+    margin: 0px;
+  }
+  
