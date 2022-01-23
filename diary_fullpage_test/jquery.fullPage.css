@@ -39,6 +39,7 @@ html.fp-enabled,
     display: table;
     table-layout:fixed;
     width: 100%;
+    background-color: whitesmoke;
 }
 .fp-tableCell {
     display: table-cell;
