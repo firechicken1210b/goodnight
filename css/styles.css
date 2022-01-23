@@ -3,6 +3,8 @@ body{
     margin: 0px;
     cursor: url("cursor.png"), auto;
     font-family: 'Noto Serif TC', serif;
+    /* background-color: #F5F5F5; */
+    background-color: whitesmoke;
 }
 
 h1{
@@ -16,14 +18,14 @@ p{
 }
 
 div{
-    background-color: white;
+    background-color: whitesmoke;
      /* display: block; */
     box-sizing: border-box;
     /* border: 3px solid;  */
     /* border-color: red; */
 }
 div:hover{
-    background-color: #ffc331;
+    /* background-color: #ffc331; */
 }
 /* ---------------------------------------------------- */
 .index_container{
@@ -152,7 +154,7 @@ blink {
 }
 
 .right_group01_weather{
-    background-color: white;
+    background-color: whitesmoke;
     position: absolute;
     top: 0%; right: 0px;
     width: 180px;
@@ -164,7 +166,7 @@ blink {
 }
 
 .right_group01_color{
-    background-color: white;
+    background-color: whitesmoke;
     position: absolute;
     top: 0%; left: 0%;
     width: 60px;
@@ -175,7 +177,7 @@ blink {
 }
 
 .right_group01_audio{
-    background-color: white;
+    background-color: whitesmoke;
     position: absolute;
     top: 60px; left: 0%;
     width: 60px;
@@ -186,7 +188,7 @@ blink {
 }
 
 .right_group01_back{
-    background-color: white;
+    background-color: whitesmoke;
     position: absolute;
     top: 120px; left: 0%;
     width: 60px;
@@ -230,7 +232,7 @@ blink {
     /* flex-direction:column; */
 }
 .right_year:hover {
-    background-color: white;
+    /* background-color: white; */
 }
 
 .right_year_table{
