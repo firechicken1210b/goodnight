@@ -96,7 +96,7 @@ loadtest();
 function addElement(obj,index) {
     var parent = document.getElementById(obj);
     var diaryBox = document.createElement("img");
-    diaryBox.setAttribute("class", "c2015svg");
+    diaryBox.setAttribute("class", "mailImg");
     diaryBox.setAttribute("src", index);
     parent.appendChild(diaryBox);
 }
