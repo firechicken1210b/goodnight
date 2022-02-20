@@ -198,6 +198,22 @@ blink {
     border-right: 3px solid;
 }
 
+.right_year {
+    position: absolute;
+    top: 180px; left: 0%;
+    width: 100%;
+    height: calc(100% - 180px);
+
+    display: flex;
+    flex-direction:column;
+    align-content:stretch;
+}
+
+.right_year_img_div{
+    /* set size with px*/
+
+}
+
 .right_year_img{
     max-width: 100%;
     max-height: 100%;
@@ -206,39 +222,16 @@ blink {
     display: block;  
 }
 
-.right_year_img2{
-    /* display: inline-flex;   */
-    /* max-width: 100%;
-    max-height: 100%; */
 
-}
-
-.right_year img{
-    max-width: auto;
-    max-height: auto;
-}
-
-.right_year {
-    position: absolute;
-    top: 180px; left: 0%;
-    width: 100%;
-    height: calc(100% - 180px);
-    /* height: 300px; */
-
-    /* display: flex;  
-    justify-content: center; */
-    /* flex-wrap: wrap; */
-    /* align-items:stretch; */
-    /* flex-direction:column; */
-}
 .right_year:hover {
     /* background-color: white; */
 }
 
 .right_year_table{
-    height: 100%;
+    table-layout: fixed;
     width: 100%;
-
+    overflow:hidden;
+    word-break: break-all;
 }
 .right_year_div{
     height: 100%;
@@ -314,4 +307,11 @@ blink {
     text-align: center;
     border-left: 3px solid;
     /* background-color: #ffc331;*/
+}
+
+/* -------------- */
+.mailImg{
+    width: 1200px;
+    min-width:100%;
+    height: auto;
 }
