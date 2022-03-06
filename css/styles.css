@@ -211,7 +211,7 @@ blink {
 
 .right_year_img_div{
     /* set size with px*/
-
+    height: 90px;
 }
 
 .right_year_img{
