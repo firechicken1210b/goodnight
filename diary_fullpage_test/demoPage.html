@@ -22,6 +22,9 @@
 		#section1 img{
 			/* margin: 20px 0 0 0; */
 			height: 900px;
+			/* bottom: 0px; */
+			/* position: absolute; */
+			margin-bottom: 60px;
 		}
 		#section2 img{
 			margin: 20px 0 0 52px;
@@ -66,19 +69,22 @@
 				
 			});
 
-			$('#fullpage').on('mousewheel', function(event) {
-				if (event.deltaY > 0){$.fn.fullpage.moveSlideRight();}
-				else{$.fn.fullpage.moveSlideLeft();}
-			});
+			$.fn.fullpage.setAllowScrolling(true);
 
-			$('#fullpage').on('mousewheel', function(event) {
-				console.log(event.deltaX, event.deltaY, event.deltaFactor);
-			});
+			// $('#fullpage').on('mousewheel', function(event) {
+			// 	console.log(event);
+			// 	if (event.deltaY > 0){$.fn.fullpage.moveSlideRight();}
+			// 	else{$.fn.fullpage.moveSlideLeft();}
+			// });
 
-			// using the event helper
-			$('#fullpage').mousewheel(function(event) {
-				console.log(event.deltaX, event.deltaY, event.deltaFactor);
-			});
+			// $('#fullpage').on('mousewheel', function(event) {
+			// 	console.log(event.deltaX, event.deltaY, event.deltaFactor);
+			// });
+
+			// // using the event helper
+			// $('#fullpage').mousewheel(function(event) {
+			// 	console.log(event.deltaX, event.deltaY, event.deltaFactor);
+			// });
 
 		});
 	</script>
@@ -87,19 +93,25 @@
 <body>
 
 <ul id="menu">
-	<li data-menuanchor="56"><a href="..">Home</a></li>
-	<li data-menuanchor="56"><a href="#2015">Jan</a></li>
-	<li data-menuanchor="56"><a href="#2015/1">Feb</a></li>
-	<li data-menuanchor="58"><a href="#2015/2">Mar</a></li>
-	<li data-menuanchor="55"><a href="#2015/3">Apri</a></li>
-	<li data-menuanchor="55"><a href="#2015/4">May</a></li>
-	<li data-menuanchor="55"><a href="#2015/6">Jun</a></li>
-	<li data-menuanchor="55"><a href="#2015/7">Jul</a></li>
-	<li data-menuanchor="55"><a href="#2015/8">Aug</a></li>
-	<li data-menuanchor="55"><a href="#2015/9">Sep</a></li>
-	<li data-menuanchor="55"><a href="#2015/10">Oct</a></li>
-	<li data-menuanchor="55"><a href="#2015/11">Nov</a></li>
-	<li data-menuanchor="55"><a href="#2015/12">Dec</a></li>
+	<li data-menuanchor="56"><a href=".." style="
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		height: 0px;
+	"> <img src="./imgs/diary_home.svg" style="width: 36px;height: 36px;"> </a></li>
+	<li data-menuanchor="56"><a class="monthtag" href="#2015">Jan</a></li>
+	<li data-menuanchor="56"><a class="monthtag" href="#2015/1">Feb</a></li>
+	<li data-menuanchor="58"><a class="monthtag" href="#2015/2">Mar</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/3">Apri</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/4">May</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/6">Jun</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/7">Jul</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/8">Aug</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/9">Sep</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/10">Oct</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/11">Nov</a></li>
+	<li data-menuanchor="55"><a class="monthtag" href="#2015/12">Dec</a></li>
 </ul>
 
 
@@ -108,8 +120,6 @@
 	<div class="section" id="section1">
 		<div class="slide">
 			<div class="intro">
-				<!-- <h1>Create Sliders</h1> -->
-				<!-- <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p> -->
 				<img src="imgs/201501.svg" alt="slider" />
 			</div>
 
