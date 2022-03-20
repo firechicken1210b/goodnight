@@ -24,7 +24,15 @@
                 <blink><p class="tc_p">## New mail has arrived ##</p></blink>
         </div>
         <div class="tc_date">
-                <p class="tc_p">July 25 | 2021</p>
+                <p class="tc_p" id = "tc_p_date">July 25 | 2021</p>
+                <script>
+                    document.getElementById("tc_p_date").innerHTML = Date();
+                    setTimeout('current_time()',1000); //每秒呼叫一次功能: current_time()
+                    function current_time(){
+                        document.getElementById("tc_p_date").innerHTML = Date();
+                        setTimeout('current_time()',1000); //每秒呼叫一次功能: current_time()
+                    }
+                </script>
         </div>
     </div>
 
