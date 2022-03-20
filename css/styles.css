@@ -25,7 +25,7 @@ div{
     /* border-color: red; */
 }
 div:hover{
-    /* background-color: #ffc331; */
+    background-color: #ffc331;
 }
 /* ---------------------------------------------------- */
 .index_container{
@@ -36,6 +36,10 @@ div:hover{
     /* background-color: #B5EAEA; */
     /* overflow-y: scroll;  */
     /* Add the ability to scroll */
+}
+
+.index_container:hover{
+    background-color: whitesmoke;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -224,7 +228,7 @@ blink {
 
 
 .right_year:hover {
-    /* background-color: white; */
+    background-color: white;
 }
 
 .right_year_table{
@@ -294,7 +298,7 @@ blink {
 .bc_1{
     position: absolute;
     top: 0%; left: 0px;
-    width: 85%;
+    width: calc(100% - 240px);
     height: 100%;
     /* background-color: #ffc331;*/
 }
