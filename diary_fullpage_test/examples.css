@@ -82,9 +82,9 @@ p{
             border-radius: 10px;
 }
 #menu li.active{
-	background:#666;
-	background: rgba(0,0,0, 0.5);
-	color: #fff;
+	background:#ffc331;
+	/* background: rgba(0,0,0, 0.5); */
+	color: rgba(0,0,0, 0.5); 
 }
 #menu li a{
 	text-decoration:none;
@@ -251,4 +251,12 @@ p{
 	font-family: 'Noto Sans TC', sans-serif;
 	font-weight: 900;
  }
+
+ .monthtag:hover{
+    /* background-color: #ffc331; */
+}
+
+#menu li:hover a{
+	color: #ffc331;
+}
 
