@@ -5,7 +5,19 @@ html, body {
   body {
     display: flex; /*使物件依序排列*/
     flex-direction: column; /*使物件垂直排列*/
+    overflow: overlay;
   }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+
   .wrapper {
     flex-grow: 1; /*可佔滿垂直剩餘的空間*/
     display: flex;  
@@ -16,36 +28,101 @@ html, body {
     text-align: center; 
   }
   .footer {
+    position: fixed;
+    bottom: 0px;
     background-color: gray;
+
     height: 60px;
+    width: 100%;
   }
 
   .header {
+    position: fixed;
     background-color: sienna;
-    height: 60px;
-  }
 
+    height: 60px;
+    width: 100%;
+  }
   
   .main {
     text-align: left;
-    background: deepskyblue;
+    background: whitesmoke;
+
+    width: 100%;
+    /* height: calc(100%-120px); */
+    height: calc(100% - 60px);
+
+    min-height: 810px;
   }
-  
+
+  .container_email {
+    background-color: brown;
+    /* overflow-y :auto; */
+    overflow-y:scroll; 
+
+    height: calc(100% - 300px);
+    width: 100%;
+
+    min-height: 510px;
+  }
+
+  .container_intro {
+    background-color: seagreen;
+
+    height: 300px;
+    width: 100%;
+
+    min-height: 300px;
+    bottom:0px
+  }
+
+  .email{
+    
+    float: left;
+    width: 50%;
+    height: 60px;
+    border-bottom: 3px solid;
+
+    overflow:hidden; /* 讓超出 DIV 寬度範圍的字串隱藏。 */
+    white-space:nowrap; /* 讓多餘的字串不要自動折行。 */
+    text-overflow:ellipsis;  /* 用點點點（...）來表示被切斷的字串。 */
+    
+    /* min-width: 250px; */
+  }
+
+  #emails{
+    overflow: overlay;
+  }
+
+  #emails::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #emails::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+
   .aside-1 {
     background: gold;
   }
   
-  .aside-2 {
+  .sidebar {
     background: hotpink;
+
+    height: calc(100% - 60px);
   }
 
   .side-year {
     background: blueviolet;
     width: 100%;
-    height: calc(100% - 180px);;
+    height: calc(100% - 180px);
+
+    /* min-height: 300px; */
   }
   
-  .side-menu {
+  .sidebar-menu {
     background: cornflowerblue;
     width: 100%;
     display: flex;  
@@ -70,6 +147,6 @@ html, body {
     .main    { flex: 7 0px; }
     .aside-1 { order: 1; } 
     .main    { order: 2; }
-    .aside-2 { order: 3; }
+    .sidebar { order: 3; }
     .footer  { order: 4; }
   }

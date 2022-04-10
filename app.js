@@ -71,7 +71,17 @@ function addElementDiv(obj,i) {
 	a.setAttribute("class", "ic_a");
 	var div = document.createElement("div");
 	div.setAttribute("class", "index_container-mail_"+i%2);
-	div.innerHTML = mail_address[i];
+	// div.innerHTML = mail_address[i];
+
+	var img = document.createElement("img");
+	img.setAttribute("src", "img/mail_icon.svg");
+	img.setAttribute("style", "max-width:30%;max-height:30%;");
+	var p = document.createElement("p");
+	p.innerHTML = mail_address[i];
+
+	
+	div.appendChild(img);
+	div.appendChild(p);
 	a.appendChild(div);
 	parent.appendChild(a);
 	console.log("112ss3");
