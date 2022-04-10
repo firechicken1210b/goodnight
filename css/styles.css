@@ -62,6 +62,8 @@ div:hover{
     height: 60px;
     border-bottom: 3px solid;
     border-right: 3px solid;
+    display: flex;
+    align-items: center;
 }
 .index_container-mail_1{
     float:left;
@@ -69,6 +71,8 @@ div:hover{
     width: 50%;
     height: 60px;
     border-bottom: 3px solid;
+    display: flex;
+    align-items: center;
 }
 .ic_a{
     color:black;
